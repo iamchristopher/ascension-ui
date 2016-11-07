@@ -1,0 +1,17 @@
+@value panel from '../../styles/panels/default.css';
+
+.container {
+    bottom: 0;
+    position: absolute;
+    right: 10px;
+}
+
+.panel {
+    composes: panel;
+    background-color: rgba(53, 131, 140, 1.0);
+    border-color: rgba(53, 131, 140, 1.0);
+    margin-bottom: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    width: 250px;
+}
