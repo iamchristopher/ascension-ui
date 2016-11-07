@@ -18,11 +18,11 @@ export default ({
         <form className={styles.subpanel}>
             <ul
                 className={styles.textarea}
-                readonly
+                readOnly
                 disabled
             >
                 {
-                    messages.map(m => <li>
+                    messages.map((m, i) => <li key={i}>
                         <b>{m.sender}: </b>{m.text}
                     </li>)
                 }
