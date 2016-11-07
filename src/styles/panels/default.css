@@ -1,4 +1,4 @@
-@value button, input, textarea from '../forms/inputs.css';
+@value button, input from '../forms/inputs.css';
 
 .panel {
     background: rgba(79, 94, 98, 1.0);
@@ -50,10 +50,4 @@
     margin-left: 0;
     margin-right: 0;
     width: 326px;
-}
-
-.textarea {
-    composes: textarea;
-    margin-left: 0;
-    margin-right: 0;
 }

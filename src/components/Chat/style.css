@@ -1,5 +1,6 @@
 @value panel, title, button, input, textarea from '../../styles/panels/default.css';
 @value tabs from '../../styles/tabs/default.css';
+@value textarea from '../../styles/forms/inputs.css';
 
 .panel {
     composes: panel;
@@ -19,4 +20,6 @@
 
 .textarea {
     composes: textarea;
+    margin-left: 0;
+    margin-right: 0;
 }
