@@ -1,0 +1,31 @@
+.tabs {
+    clear: both;
+    display: table;
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.tabs li {
+    float: left;
+    margin: 0 1px 0 0;
+}
+
+.tabs li a:active,
+.tabs li a:link,
+.tabs li a:visited {
+    background: url('/images/tabs_background.png') 0 -30px no-repeat;
+    color: #ccc;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+}
+
+.tabs li a:focus,
+.tabs li a:hover {
+    background-position: 0 0;
+    color: #fff;
+}

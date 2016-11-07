@@ -1,4 +1,14 @@
+@value panel, title from '../../styles/panels/default.css';
+@value tabs from '../../styles/tabs/default.css';
 @value input, button, textarea from '../../styles/forms/inputs.css';
+
+.panel {
+    composes: panel;
+}
+
+.title {
+    composes: title;
+}
 
 .input {
     composes: input;

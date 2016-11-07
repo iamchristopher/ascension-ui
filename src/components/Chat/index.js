@@ -9,27 +9,33 @@ export default ({
         }
     ]
 }) => (
-    <form>
-        <h1>Chat</h1>
-        <ul
-            className={styles.textarea}
-            readonly
-            disabled
-        >
-            {
-                messages.map(m => <li>
-                    <b>{m.sender}: </b>{m.text}
-                </li>)
-            }
+    <div className={styles.panel}>
+        <h3 className={styles.title}>Chat</h3>
+        <ul className={styles.tabs}>
+            <li className="active"><a href="#">Room (0)</a></li>
+            <li><a href="#">Lobby (0)</a></li>
         </ul>
-        <input
-            className={styles.input}
-            placeholder="Enter message"
-        />
-        <button
-            className={styles.button}
-        >
-            Send
-        </button>
-    </form>
+        <form className={styles.subpanel}>
+            <ul
+                className={styles.textarea}
+                readonly
+                disabled
+            >
+                {
+                    messages.map(m => <li>
+                        <b>{m.sender}: </b>{m.text}
+                    </li>)
+                }
+            </ul>
+            <input
+                className={styles.input}
+                placeholder="Enter message"
+            />
+            <button
+                className={styles.button}
+            >
+                Send
+            </button>
+        </form>
+    </div>
 );

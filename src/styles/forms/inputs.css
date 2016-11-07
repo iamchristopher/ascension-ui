@@ -9,7 +9,7 @@
     font-size: 0.85rem;
     height: 32px;
     line-height: 32px;
-    margin: 10px 1px;
+    margin: 1px;
     outline: none;
     text-decoration: none;
     text-indent: 0.5rem;
@@ -55,13 +55,15 @@
 
 .textarea {
     composes: input;
+    background: rgba(39, 47, 49, 1.0);
+    border: none;
     display: block;
     height: 8.0rem;
     line-height: 1.6rem;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 5px 10px 5px 20px;
     resize: none;
     text-indent: -10px;
     word-wrap: break-word;
-    width: 310px;
+    width: 100%;
 }
