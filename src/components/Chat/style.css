@@ -1,0 +1,13 @@
+@value input, button, textarea from '../../styles/forms/inputs.css';
+
+.input {
+    composes: input;
+}
+
+.button {
+    composes: button;
+}
+
+.textarea {
+    composes: textarea;
+}

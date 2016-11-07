@@ -1,5 +1,12 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    background: #242424;
+    margin: 50px;
+    color: #fff;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+ul,
+ol {
+    list-style: none;
 }
