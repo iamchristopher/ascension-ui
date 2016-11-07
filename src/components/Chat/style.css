@@ -1,6 +1,6 @@
-@value panel, title from '../../styles/panels/default.css';
+@value panel, title, button, input from '../../styles/panels/default.css';
 @value tabs from '../../styles/tabs/default.css';
-@value input, button, textarea from '../../styles/forms/inputs.css';
+@value textarea from '../../styles/forms/inputs.css';
 
 .panel {
     composes: panel;
