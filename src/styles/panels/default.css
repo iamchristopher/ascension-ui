@@ -1,9 +1,10 @@
 @value button, input from '../forms/inputs.css';
+@value primary, secondary from '../variables/colours.css';
 
 .panel {
-    background: rgba(79, 94, 98, 1.0);
+    background: primary;
     background-clip: padding-box;
-    border: 1px solid rgba(79, 94, 98, 1.0);
+    border: 1px solid primary;
     border-radius: 5px;
     box-shadow: inset 0 0 0 1px #000;
     box-sizing: border-box;
@@ -12,13 +13,13 @@
     height: auto;
     margin: 0 0;
     padding: 40px 10px 10px;
-    position: relative;;
+    position: relative;
     width: 400px;
     z-index: 5;
 }
 
 .title {
-    background: rgba(53, 131, 140, 1.0);
+    background: secondary;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     color: #fff;
@@ -35,7 +36,7 @@
 
 .button {
     composes: button;
-    box-shadow: inset 0 0 0 1px rgba(79, 94, 98, 1.0);
+    box-shadow: inset 0 0 0 1px primary;
     float: right;
 }
 
