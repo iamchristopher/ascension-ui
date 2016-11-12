@@ -1,8 +1,28 @@
 import { connect } from 'react-redux';
-import component from '../components/Chat';
+import Chat from '../components/Chat';
 
-const mapStateToProps = () => ({});
+import * as chat from '../actions/chat';
+
+const mapStateToProps = ({ chat }) => ({
+    messages: chat.messages
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    onSubmit (e) {
+        e.preventDefault();
+        const message = e.target.message;
+
+        dispatch(chat.sendMessage({
+            sender: 'test',
+            text: message.value
+        }));
+
+        e.target.reset();
+        message.focus();
+    }
+});
 
 export default connect(
-    mapStateToProps
-)(component);
+    mapStateToProps,
+    mapDispatchToProps
+)(Chat);
