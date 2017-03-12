@@ -4,6 +4,10 @@
 
 .panel {
     composes: panel;
+
+    bottom: 0;
+    left: 0;
+    position: absolute;
 }
 
 .title {
