@@ -17,7 +17,7 @@ export default (state = initialState, action = {}) => {
             return {
                 ...state,
                 [id]: {
-                    ...state.pawns[id],
+                    ...state[id],
                     ...data
                 }
             };
