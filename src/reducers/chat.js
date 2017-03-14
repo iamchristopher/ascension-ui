@@ -4,7 +4,8 @@ const initialState = {
 
 export default (state = initialState, action = {}) => {
     switch (action.type) {
-        case 'RECEIVE_CHAT_MESSAGE':
+        case 'CHAT_MESSAGE_RECEIVE':
+        case 'CHAT_MESSAGE_SEND':
             return {
                 ...state,
                 messages: [
