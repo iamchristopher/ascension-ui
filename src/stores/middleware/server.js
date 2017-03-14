@@ -1,6 +1,6 @@
 import {
     receiveMessage
-} from '../../../actions/chat';
+} from '../../actions/chat';
 
 import io from 'socket.io-client/dist/socket.io';
 const connection = io('http://localhost:8080');
