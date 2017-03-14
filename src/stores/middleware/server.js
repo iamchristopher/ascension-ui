@@ -11,10 +11,10 @@ export default ({ getState, dispatch }) => {
     return next => action => {
         const {
             type,
-            value
+            ...payload
         } = action;
 
-        connection.emit(type, value);
+        connection.emit(type, payload);
 
         return next(action);
     };

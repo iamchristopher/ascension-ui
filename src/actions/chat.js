@@ -1,11 +1,19 @@
-export const sendMessage = (value) => ({
+export const sendMessage = ({
+    sender,
+    text
+} = {}) => ({
     type: 'CHAT_MESSAGE_SEND',
-    value
+    sender,
+    text
 });
 
-export const receiveMessage = (value) => ({
+export const receiveMessage = ({
+    sender,
+    text
+} = {}) => ({
     type: 'CHAT_MESSAGE_RECEIVE',
-    value
+    sender,
+    text
 });
 
 export const joinRoom = ({
@@ -13,8 +21,6 @@ export const joinRoom = ({
     user
 } = {}) => ({
     type: 'CHAT_JOIN_ROOM',
-    value: {
-        user,
-        room
-    }
+    user,
+    room
 });

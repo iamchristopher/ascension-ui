@@ -1,18 +1,18 @@
-const initialState = {
-    messages: []
-};
+const initialState = [];
 
 export default (state = initialState, action = {}) => {
-    switch (action.type) {
+    const {
+        type,
+        ...message
+    } = action;
+
+    switch (type) {
         case 'CHAT_MESSAGE_RECEIVE':
         case 'CHAT_MESSAGE_SEND':
-            return {
+            return [
                 ...state,
-                messages: [
-                    ...state.messages,
-                    action.value
-                ]
-            }
+                message
+            ];
         default:
             return state;
     }
