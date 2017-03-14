@@ -7,8 +7,10 @@ import './index.css';
 import App from './containers/Chat';
 import Notifications from './components/Notifications';
 
+window.AscensionStore = store();
+
 ReactDOM.render(
-    <Provider store={store()}>
+    <Provider store={window.AscensionStore}>
         <div>
             <App />
             <Notifications />
