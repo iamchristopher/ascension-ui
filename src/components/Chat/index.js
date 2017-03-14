@@ -19,9 +19,13 @@ export default ({ messages, onSubmit }) => (
             >
                 {
                     messages.map((m, i) => (
-                        <li key={i}>
-                            <b>{m.sender}: </b>{m.text}
-                        </li>
+                        m.sender === 'System'
+                        ?   <li key={i}>
+                                <em>{m.text}</em>
+                            </li>
+                        :   <li key={i}>
+                                <b>{m.sender}: </b> {m.text}
+                            </li>
                     ))
                 }
             </ul>
