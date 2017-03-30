@@ -4,7 +4,8 @@ export const sendMessage = ({
 } = {}) => ({
     type: 'CHAT_MESSAGE_SEND',
     sender,
-    text
+    text,
+    sync: true
 });
 
 export const receiveMessage = ({
@@ -22,5 +23,6 @@ export const joinRoom = ({
 } = {}) => ({
     type: 'CHAT_JOIN_ROOM',
     user,
-    room
+    room,
+    sync: true
 });
