@@ -13,6 +13,25 @@ export default (state = initialState, action = {}) => {
                 ...state,
                 [id]: data
             };
+        case 'PAWN_UNREGISTER':
+            let {
+                owner
+            } = action;
+
+            return Object.keys(state)
+                .filter(id => {
+                    const pawn = state[id];
+
+                    if (!pawn.owner) {
+                        return true;
+                    }
+
+                    return pawn.owner !== owner
+                })
+                .reduce((cache, id) => ({
+                    ...cache,
+                    [id]: state[id]
+                }), {});
         case 'PAWN_MOVE':
             return {
                 ...state,
