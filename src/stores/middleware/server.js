@@ -13,6 +13,11 @@ const connection = io('http://localhost:8080', {
 });
 wildcard(io.Manager)(connection);
 
+connection.on('connect', () => window.AscensionStore.dispatch({
+    type: 'USER_SESSION_SET',
+    id: connection.id
+}));
+
 export default ({ getState, dispatch }) => {
     connection.on('*', ({
         data: [
