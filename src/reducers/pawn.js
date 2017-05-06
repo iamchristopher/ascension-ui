@@ -19,15 +19,7 @@ export default (state = initialState, action = {}) => {
             } = action;
 
             return Object.keys(state)
-                .filter(id => {
-                    const pawn = state[id];
-
-                    if (!pawn.owner) {
-                        return true;
-                    }
-
-                    return pawn.owner !== owner
-                })
+                .filter(id => state[id].owner !== owner)
                 .reduce((cache, id) => ({
                     ...cache,
                     [id]: state[id]
