@@ -5,7 +5,7 @@ import Chat from '../components/Chat';
 import * as chat from '../actions/chat';
 
 const mapStateToProps = ({ chat }) => ({
-    messages: chat
+    messages: Object.values(chat)
 });
 
 const mapDispatchToProps = dispatch => {

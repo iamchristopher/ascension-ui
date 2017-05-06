@@ -1,4 +1,4 @@
-const initialState = [];
+const initialState = {};
 
 export default (state = initialState, action = {}) => {
     const {
@@ -9,10 +9,12 @@ export default (state = initialState, action = {}) => {
     switch (type) {
         case 'CHAT_MESSAGE_RECEIVE':
         case 'CHAT_MESSAGE_SEND':
-            return [
+            let id = Date.now().toString();
+
+            return {
                 ...state,
-                message
-            ];
+                [id]: message
+            };
         default:
             return state;
     }
