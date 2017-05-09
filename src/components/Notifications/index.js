@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './style.css';
 
-export default () => (
+export default ({ notifications }) => (
     <ul className={styles.container}>
-        <li className={styles.panel}>You have been attacked one of the Overlord's minions!</li>
-        <li className={styles.panel}>CarlCastello has been defeated!</li>
+        {notifications.map(({ text }, i) => (
+            <li className={styles.panel} key={i}>
+                {text}
+            </li>
+        ))}
     </ul>
 );
