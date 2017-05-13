@@ -1,20 +1,73 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from './stores/configureStore';
+import {
+    Route
+} from 'react-router';
+import { ConnectedRouter } from 'react-router-redux';
+import {
+    default as store,
+    history
+} from './stores/configureStore';
 
 import './index.css';
-import App from './containers/Chat';
+import Chat from './containers/Chat';
 import Notifications from './containers/Notification';
 
 window.AscensionStore = store();
 
+const routes = [
+    {
+        path: '/',
+        component: () => (
+            <div>
+                <Chat />
+                <Notifications />
+            </div>
+        )
+    },
+    {
+        path: '/user',
+        component: () => <h1>User</h1>,
+        routes: [
+            {
+                path: '/:id',
+                component: ({ match }) => <h1>User #{match.params.id}</h1>
+            }
+        ]
+    }
+];
+
+const CustomRoute = ({
+    path,
+    component,
+    routes = []
+}) => (
+    <div>
+        <Route
+            path={path}
+            exact
+            render={component}
+        />
+        {routes.map((route, i) => <CustomRoute
+            key={i}
+            path={path + route.path}
+            component={route.component}
+            routes={route.routes}
+        />)}
+    </div>
+);
+
 ReactDOM.render(
     <Provider store={window.AscensionStore}>
-        <div>
-            <App />
-            <Notifications />
-        </div>
+        <ConnectedRouter history={history}>
+            <div>
+                {routes.map((route, i) => <CustomRoute
+                    key={i}
+                    {...route}
+                />)}
+            </div>
+        </ConnectedRouter>
     </Provider>,
-  document.getElementById('ui')
+    document.getElementById('ui')
 );
