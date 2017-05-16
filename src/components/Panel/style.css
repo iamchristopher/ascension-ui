@@ -1,0 +1,15 @@
+@value panel, panelBody, title from '../../styles/panels/default.css';
+@value tabs from '../../styles/tabs/default.css';
+@value textarea from '../../styles/forms/inputs.css';
+
+.panel {
+    composes: panel;
+}
+
+.panelBody {
+    composes: panelBody;
+}
+
+.title {
+    composes: title;
+}
