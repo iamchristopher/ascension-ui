@@ -17,7 +17,7 @@ export default ({ messages, onSubmit }) => (
         <form
             style={{
                 display: 'flex',
-                'flex-flow': 'column',
+                flexFlow: 'column',
                 height: '100%'
             }}
             onSubmit={onSubmit}
@@ -47,7 +47,7 @@ export default ({ messages, onSubmit }) => (
                 style={{
                     display: 'flex',
                     flex: '0 1 auto',
-                    'flex-flow': 'row'
+                    flexFlow: 'row'
                 }}
             >
                 <input
