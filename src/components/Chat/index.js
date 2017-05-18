@@ -1,5 +1,6 @@
 import React from 'react';
 import Panel from '../Panel';
+import { TabContainer, Tab } from '../Tabs';
 import styles from './style.css';
 
 export default ({ messages, onSubmit }) => (
@@ -10,10 +11,10 @@ export default ({ messages, onSubmit }) => (
             width: 450
         }}
     >
-        <ul className={styles.tabs}>
-            <li className="active"><a href="#">Room (0)</a></li>
-            <li><a href="#">Lobby (0)</a></li>
-        </ul>
+        <TabContainer>
+            <Tab>Room (0)</Tab>
+            <Tab>Lobby (0)</Tab>
+        </TabContainer>
         <form
             style={{
                 display: 'flex',
