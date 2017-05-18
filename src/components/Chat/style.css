@@ -1,5 +1,4 @@
 @value panel, title, button, input, textarea from '../../styles/panels/default.css';
-@value tabs from '../../styles/tabs/default.css';
 @value textarea from '../../styles/forms/inputs.css';
 
 .panel {
@@ -12,11 +11,6 @@
 
 .title {
     composes: title;
-}
-
-.tabs {
-    composes: tabs;
-    flex: 0 1 auto;
 }
 
 .input {
