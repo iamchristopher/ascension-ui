@@ -8,6 +8,7 @@ const [
 
 export default ({
     children,
+    position,
     size,
     title = 'Untitled',
     z = 1
@@ -19,6 +20,7 @@ export default ({
             y: 0,
             width: 200,
             height: 200,
+            ...position,
             ...size
         }}
         minHeight={200}

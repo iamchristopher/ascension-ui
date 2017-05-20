@@ -6,8 +6,12 @@ import styles from './style.css';
 export default ({ messages, onSubmit }) => (
     <Panel
         title="Chat"
+        position={{
+            x: window.innerWidth - 480,
+            y: window.innerHeight - 280
+        }}
         size={{
-            height: 300,
+            height: 250,
             width: 450
         }}
     >
