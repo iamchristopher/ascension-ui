@@ -9,12 +9,3 @@
 .button:after {
     background-image: url('/images/btn_panel_background.png');
 }
-
-.input {
-    composes: input;
-    background-color: rgba(39, 47, 49, 1.0);
-    border: none;
-    margin-left: 0;
-    margin-right: 0;
-    width: 326px;
-}
