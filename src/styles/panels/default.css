@@ -1,38 +1,4 @@
 @value button, input from '../forms/inputs.css';
-@value primary, secondary from '../variables/colours.css';
-
-.panel {
-    background: primary;
-    background-clip: padding-box;
-    border: 1px solid primary;
-    border-radius: 5px;
-    box-shadow: inset 0 0 0 1px #242424;
-    box-sizing: border-box;
-    color: #fff;
-    display: block;
-    height: auto;
-    margin: 0 0;
-    padding: 40px 10px 10px;
-    position: relative;
-    width: 400px;
-    z-index: 5;
-}
-
-.title {
-    background: secondary;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 300;
-    height: 30px;
-    left: 1px;
-    margin: 0;
-    position: absolute;
-    right: 1px;
-    text-align: center;
-    top: 1px;
-}
 
 .button {
     composes: button;
@@ -42,13 +8,4 @@
 
 .button:after {
     background-image: url('/images/btn_panel_background.png');
-}
-
-.input {
-    composes: input;
-    background-color: rgba(39, 47, 49, 1.0);
-    border: none;
-    margin-left: 0;
-    margin-right: 0;
-    width: 326px;
 }

@@ -1,6 +1,7 @@
 .tabs {
     clear: both;
     display: table;
+    flex: 0 1 auto;
     margin: 0;
     padding: 0;
     width: 100%;
