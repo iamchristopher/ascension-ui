@@ -10,9 +10,14 @@ export const TabContainer = ({ children }) => (
 export const Tab = ({
     isActive,
     children,
-    onClick = () => {}
+    onClick = e => e.preventDefault()
 }) => (
     <li>
-        <a href="#">{ children }</a>
+        <a
+            href="#"
+            onClick={onClick}
+        >
+            { children }
+        </a>
     </li>
 );
