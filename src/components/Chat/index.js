@@ -28,8 +28,7 @@ export default ({ messages, onSubmit }) => (
                 readOnly
                 disabled
                 style={{
-                    flex: '1 1 auto',
-                    height: '100%'
+                    flex: '1 1 auto'
                 }}
             >
                 {
