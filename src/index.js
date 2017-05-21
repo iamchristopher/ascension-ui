@@ -46,7 +46,12 @@ const CustomRoute = ({
     component,
     routes = []
 }) => (
-    <div>
+    <div
+        style={{
+            pointerEvents: 'none',
+            position: 'absolute'
+        }}
+    >
         <Route
             path={path}
             exact
