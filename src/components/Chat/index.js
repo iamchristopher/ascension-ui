@@ -1,5 +1,6 @@
 import React from 'react';
 import Panel from '../Panel';
+import Button from '../Button';
 import { TabContainer, Tab } from '../Tabs';
 import styles from './style.css';
 
@@ -62,15 +63,12 @@ export default ({ messages, onSubmit }) => (
                         flex: '1 1 auto'
                     }}
                 />
-                <button
+                <Button
                     className={styles.button}
-                    style={{
-                        flex: '0 0 auto'
-                    }}
                     type="submit"
                 >
-                    Send message
-                </button>
+                    Send
+                </Button>
             </div>
         </form>
     </Panel>

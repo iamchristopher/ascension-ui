@@ -1,4 +1,4 @@
-@value panel, title, button, input, textarea from '../../styles/panels/default.css';
+@value panel, title, input, textarea from '../../styles/panels/default.css';
 @value textarea from '../../styles/forms/inputs.css';
 
 .panel {
@@ -17,17 +17,16 @@
     composes: input;
     background-color: rgba(39, 47, 49, 1.0);
     border: none;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 1px 0 0;
     width: 326px;
 }
 
 .button {
-    composes: button;
+    flex: 0 0 auto;
+    margin: 0;
 }
 
 .textarea {
     composes: textarea;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 1px 0;
 }
