@@ -4,12 +4,14 @@ import { routerReducer } from 'react-router-redux';
 import chat from './chat';
 import notification from './notification';
 import pawn from './pawn';
+import playerActions from './playerActions';
 import user from './user';
 
 export default combineReducers({
     chat,
     notification,
     pawn,
+    playerActions,
     user,
     router: routerReducer
 });
