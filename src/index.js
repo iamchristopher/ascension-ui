@@ -69,5 +69,5 @@ ReactDOM.render(
             </div>
         </ConnectedRouter>
     </Provider>,
-    document.getElementById('ui')
+    document.getElementById('app')
 );
