@@ -14,6 +14,7 @@ import './index.css';
 import Chat from './containers/Chat';
 import Notifications from './containers/Notification';
 import App from './containers/App';
+import ActionsPanel from './containers/ActionsPanel';
 
 window.AscensionStore = store();
 
@@ -22,6 +23,7 @@ const routes = [
         path: '/',
         component: () => (
             <div>
+                <ActionsPanel />
                 <Chat />
                 <Notifications />
             </div>
