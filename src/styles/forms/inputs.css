@@ -8,10 +8,10 @@
     color: #fff;
     display: inline-block;
     font-family: 'Open Sans Condensed', Tahoma, sans-serif;
-    font-size: 0.85rem;
+    font-size: 1rem;
     height: 32px;
     line-height: 32px;
-    margin: 1px;
+    margin: 0 0 1rem 0;
     outline: none;
     text-decoration: none;
     text-indent: 0.5rem;
@@ -27,32 +27,6 @@
     top: -1px;
     width: 18px;
     z-index: 1;
-}
-
-.button {
-    composes: input;
-    background: secondary;
-    border-color: secondary;
-    cursor: pointer;
-    line-height: 22px;
-    padding: 0 15px 0 10px;
-    position: relative;
-    text-indent: 0;
-    width: auto;
-}
-
-.button:after {
-    background-image: url('/images/btn_background.png');
-}
-
-.button:focus,
-.button:hover {
-    background: rgba(46, 89, 94, 1.0);
-}
-
-.button:focus:after,
-.button:hover:after {
-    background-position: 0 -18px;
 }
 
 .textarea {

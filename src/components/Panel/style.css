@@ -13,6 +13,7 @@
     display: block;
     height: auto;
     margin: 0 0;
+    pointer-events: all;
     position: relative;
     z-index: 5;
 }

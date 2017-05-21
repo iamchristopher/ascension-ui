@@ -13,6 +13,8 @@ import {
 import './index.css';
 import Chat from './containers/Chat';
 import Notifications from './containers/Notification';
+import App from './containers/App';
+import ActionsPanel from './containers/ActionsPanel';
 
 window.AscensionStore = store();
 
@@ -21,6 +23,7 @@ const routes = [
         path: '/',
         component: () => (
             <div>
+                <ActionsPanel />
                 <Chat />
                 <Notifications />
             </div>
@@ -43,7 +46,12 @@ const CustomRoute = ({
     component,
     routes = []
 }) => (
-    <div>
+    <div
+        style={{
+            pointerEvents: 'none',
+            position: 'absolute'
+        }}
+    >
         <Route
             path={path}
             exact
@@ -61,13 +69,13 @@ const CustomRoute = ({
 ReactDOM.render(
     <Provider store={window.AscensionStore}>
         <ConnectedRouter history={history}>
-            <div>
+            <App>
                 {routes.map((route, i) => <CustomRoute
                     key={i}
                     {...route}
                 />)}
-            </div>
+            </App>
         </ConnectedRouter>
     </Provider>,
-    document.getElementById('ui')
+    document.getElementById('app')
 );

@@ -6,6 +6,7 @@
     "custom-react-scripts": "0.0.23"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "react": "15.5.4",
     "react-dom": "15.5.4",
     "react-redux": "5.0.4",
