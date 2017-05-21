@@ -29,32 +29,6 @@
     z-index: 1;
 }
 
-.button {
-    composes: input;
-    background: secondary;
-    border-color: secondary;
-    cursor: pointer;
-    line-height: 22px;
-    padding: 0 15px 0 10px;
-    position: relative;
-    text-indent: 0;
-    width: auto;
-}
-
-.button:after {
-    background-image: url('/images/btn_background.png');
-}
-
-.button:focus,
-.button:hover {
-    background: rgba(46, 89, 94, 1.0);
-}
-
-.button:focus:after,
-.button:hover:after {
-    background-position: 0 -18px;
-}
-
 .textarea {
     composes: input;
     background: rgba(39, 47, 49, 1.0);

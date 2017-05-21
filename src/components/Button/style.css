@@ -1,0 +1,32 @@
+@value input from '../../styles/forms/inputs.css';
+@value secondary from '../../styles/variables/colours.css';
+
+.button {
+    composes: input;
+    background: secondary;
+    border-color: secondary;
+    cursor: pointer;
+    line-height: 22px;
+    padding: 0 15px 0 10px;
+    position: relative;
+    text-indent: 0;
+    width: auto;
+}
+
+.button:after {
+    background-image: url('/images/btn_panel_background.png');
+}
+
+.button:focus,
+.button:hover {
+    background: rgba(46, 89, 94, 1.0);
+}
+
+.button:focus:after,
+.button:hover:after {
+    background-position: 0 -18px;
+}
+
+.button:active {
+    background: rgba(75, 157, 167, 1.0);
+}
