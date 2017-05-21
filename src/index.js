@@ -13,6 +13,7 @@ import {
 import './index.css';
 import Chat from './containers/Chat';
 import Notifications from './containers/Notification';
+import App from './containers/App';
 
 window.AscensionStore = store();
 
@@ -61,12 +62,12 @@ const CustomRoute = ({
 ReactDOM.render(
     <Provider store={window.AscensionStore}>
         <ConnectedRouter history={history}>
-            <div>
+            <App>
                 {routes.map((route, i) => <CustomRoute
                     key={i}
                     {...route}
                 />)}
-            </div>
+            </App>
         </ConnectedRouter>
     </Provider>,
     document.getElementById('app')
