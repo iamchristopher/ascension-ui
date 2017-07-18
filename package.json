@@ -3,20 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "custom-react-scripts": "0.0.23"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "react": "15.5.4",
-    "react-dom": "15.5.4",
-    "react-redux": "5.0.4",
-    "react-rnd": "^5.0.4",
-    "react-router": "^4.1.1",
-    "react-router-redux": "^5.0.0-alpha.6",
-    "redux": "3.6.0",
+    "classnames": "2.2.5",
+    "custom-react-scripts": "0.0.23",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-redux": "5.0.5",
+    "react-rnd": "5.0.9",
+    "react-router": "4.1.2",
+    "react-router-redux": "5.0.0-alpha.6",
+    "redux": "3.7.2",
     "redux-thunk": "2.2.0",
-    "socket.io": "2.0.1",
-    "socketio-wildcard": "0.4.0"
+    "socket.io": "2.0.3",
+    "socketio-wildcard": "2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
